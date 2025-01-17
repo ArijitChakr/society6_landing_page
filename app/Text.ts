@@ -1,3 +1,5 @@
+import { text } from "stream/consumers";
+
 export const NavbarText = [
   "New Arrivals",
   "Wall Decor",
@@ -16,9 +18,9 @@ export const textSlider1 = [
 ];
 
 export const HeroImage = [
-  "/HeroImage1.webp",
-  "/HeroImage2.webp",
-  "/HeroImage3.webp",
-  "/HeroImage4.webp",
-  "/HeroImage5.webp",
+  { image: "/HeroImage1.webp", text: "Natural Haze Style Guide" },
+  { image: "/HeroImage2.webp", text: "Charming Nostalgia Style Guide" },
+  { image: "/HeroImage3.webp", text: "Pantone Color of the Year 2025" },
+  { image: "/HeroImage4.webp", text: "New Bedding Collection" },
+  { image: "/HeroImage5.webp", text: "Modern Craft Style Guide" },
 ];
