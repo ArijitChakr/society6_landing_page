@@ -1,6 +1,8 @@
 import Carousel from "./components/Carousel";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import LearnMore from "./components/LearnMore";
+import ShopByRoom from "./components/ShopByRoom";
 import TextSlider from "./components/TextSlider";
 import { HeroImage, textSlider1 } from "./Text";
 
@@ -11,6 +13,8 @@ export default function Home() {
       <Carousel />
       <TextSlider text={textSlider1} />
       <Hero images={HeroImage} />
+      <LearnMore />
+      <ShopByRoom />
       <div className="w-full h-screen"></div>
     </div>
   );

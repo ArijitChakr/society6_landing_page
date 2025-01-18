@@ -1,13 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { HeroSliderText } from "../Text";
+import PrevArrow from "./PrevArrow";
+import NextArrow from "./NextArrow";
+import { HeroButtonTexts } from "../Text";
 
-export default function Hero({ images }: { images: string[] }) {
+export default function Hero({
+  images,
+}: {
+  images: { image: string; text: string }[];
+}) {
   const [sliderIndex, setSliderIndex] = useState(0);
 
   const nextImage = () => {
-    setSliderIndex((prevIndex) => (prevIndex + 1) % (images.length * 3));
+    setSliderIndex((prevIndex) =>
+      prevIndex === images.length * 3 - 1 ? (prevIndex = 0) : prevIndex + 1
+    );
   };
 
   const prevImage = () => {
@@ -30,35 +38,35 @@ export default function Hero({ images }: { images: string[] }) {
           <div className="w-[650px] h-[650px]">
             <ImageSlider
               images={images}
-              texts={HeroSliderText}
               indexOffset={0}
               sliderIndex={sliderIndex}
             />
           </div>
           <div className="w-[450px] h-[650px] flex flex-col justify-evenly">
-            <h2 className="text-secondary text-xl">
+            <h2 className="text-secondary text-2xl mb-10">
               First Look at the Newest Spring Trends.
             </h2>
             <div className="w-[450px] h-[450px]">
               <ImageSlider
                 images={images}
-                texts={Array(3).fill(HeroSliderText).flat()}
                 indexOffset={1}
                 sliderIndex={sliderIndex}
               />
             </div>
-            <div className="flex justify-evenly items-center">
+            <div className="flex justify-between mt-4 items-center">
               <button
                 onClick={prevImage}
-                className="bg-white text-black px-4 py-2 rounded shadow-lg focus:outline-none"
+                className="cursor-pointer py-2 rounded- font-bold bg-white text-black "
+                disabled={sliderIndex === 0}
               >
-                Prev
+                <PrevArrow />
               </button>
               <button
                 onClick={nextImage}
-                className="bg-white text-black px-4 py-2 rounded shadow-lg focus:outline-none"
+                className="bg-white text-black py-2 rounded font-bold"
+                disabled={sliderIndex === images.length * 3 - 1}
               >
-                Next
+                <NextArrow />
               </button>
             </div>
           </div>
@@ -66,12 +74,22 @@ export default function Hero({ images }: { images: string[] }) {
           <div className="w-[400px] h-[400px]">
             <ImageSlider
               images={images}
-              texts={HeroSliderText}
               indexOffset={2}
               sliderIndex={sliderIndex}
             />
           </div>
         </div>
+      </div>
+      <div className=" my-10 flex  justify-center gap-4 items-center">
+        <h2 className="text-secondary text-2xl">Explore Trending Styles</h2>
+        {HeroButtonTexts.map((text, index) => (
+          <div
+            key={index}
+            className="cursor-pointer px-6 py-2 text-sm font-bold font-secondary text-black hover:bg-black hover:text-white rounded-full text-center border border-black"
+          >
+            {text}
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -79,11 +97,10 @@ export default function Hero({ images }: { images: string[] }) {
 
 const ImageSlider = ({
   images,
-  texts,
   sliderIndex,
   indexOffset,
 }: {
-  images: { string }[];
+  images: { text: string; image: string }[];
   sliderIndex: number;
   indexOffset: number;
 }) => {
@@ -92,10 +109,10 @@ const ImageSlider = ({
   return (
     <div className="relative w-full h-full overflow-hidden">
       <div
-        className="flex w-full h-full"
+        className="flex w-full h-full cursor-pointer"
         style={{
           transform: `translateX(-${totalOffset * 100}%)`,
-          transition: "transform 1s ease-in-out",
+          transition: "transform 1.5s ease-in-out",
         }}
       >
         {Array(3)
@@ -104,13 +121,17 @@ const ImageSlider = ({
           .map(({ image, text }, index) => (
             <div
               key={index}
-              className="w-full h-full flex-shrink-0 bg-cover bg-center"
+              className="w-full h-full flex-shrink-0 bg-cover bg-center relative "
               style={{
                 backgroundImage: `url(${image})`,
               }}
             >
-              <div className="absolute p-2 text-xl tracking-wide font-secondary bottom-0 left-0 bg-white">
-                {text}
+              <div className="absolute inset-0 " />
+              <div className="absolute p-2 text-xl tracking-wide font-secondary bottom-0 left-0 bg-white ">
+                {text}{" "}
+                <span className="px-2 font-secondary rounded-full border-black border">
+                  {">"}
+                </span>
               </div>
             </div>
           ))}
