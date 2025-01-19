@@ -16,7 +16,7 @@ export default function ShopByRoom() {
   >("bathroom");
 
   return (
-    <div className="mx-60 my-20">
+    <div className="mx-60 mt-20 mb-10">
       <div className="text-left">
         <h1 className="text-[10rem] tracking-snug font-primary">
           Shop By Room
@@ -24,25 +24,41 @@ export default function ShopByRoom() {
         <div>
           <div className="w-1/2 grid grid-cols-4 gap-px bg-black rounded-full border border-black">
             <div
-              className="uppercase text-center  py-2 font-bold cursor-pointer bg-white border-l border-black rounded-l-full"
+              className={`uppercase text-center  py-2 font-bold cursor-pointer  border-l border-black rounded-l-full ${
+                frameType === "bathroom"
+                  ? "bg-black text-white"
+                  : "bg-white font-black"
+              }`}
               onClick={() => setFrameType("bathroom")}
             >
               bathroom
             </div>
             <div
-              className="uppercase text-center  py-2 font-bold cursor-pointer bg-white"
+              className={`uppercase text-center  py-2 font-bold cursor-pointer ${
+                frameType === "bedroom"
+                  ? "bg-black text-white"
+                  : "bg-white font-black"
+              }`}
               onClick={() => setFrameType("bedroom")}
             >
               bedroom
             </div>
             <div
-              className="uppercase text-center  py-2 font-bold cursor-pointer bg-white"
+              className={`uppercase text-center  py-2 font-bold cursor-pointer ${
+                frameType === "kitchen"
+                  ? "bg-black text-white"
+                  : "bg-white font-black"
+              }`}
               onClick={() => setFrameType("kitchen")}
             >
               kitchen
             </div>
             <div
-              className="uppercase text-center  py-2 font-bold cursor-pointer bg-white border-l border-black rounded-r-full"
+              className={`uppercase text-center  py-2 font-bold cursor-pointer border-l border-black rounded-r-full ${
+                frameType === "livingroom"
+                  ? "bg-black text-white"
+                  : "bg-white font-black"
+              }`}
               onClick={() => setFrameType("livingroom")}
             >
               living room

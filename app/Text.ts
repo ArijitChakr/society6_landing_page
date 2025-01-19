@@ -57,3 +57,76 @@ export const ShopByRoomData = {
     buttonText: "explore living room",
   },
 };
+
+export const galleryData = [
+  { image: "Slider1.webp", text: "Trade Program" },
+  { image: "Slider2.webp", text: "Sell Your Art" },
+  { image: "Slider3.webp", text: "About Us" },
+];
+
+export const feedbackData = [
+  {
+    image: "/Brand1.webp",
+    description: `"Whenever I want to spruce up the walls in my home, I browse Society6’s canvas prints, framed posters, and tapestries. There are so many styles and tastes to choose from…you’re bound to find something that suits your space."`,
+  },
+  {
+    image: "/Brand2.avif",
+    description: `"For truly adorable and unique home accessories…you can't beat Society6—especially if you're looking for cute art prints and bedding."`,
+  },
+  {
+    image: "/Brand3.webp",
+    description: `"Get ready to discover stuff you didn't even know existed, but now desperately need in your life."`,
+  },
+  {
+    image: "/Brand4.webp",
+    description: `"Get ready to discover stuff you didn't even know existed, but now desperately need in your life."`,
+  },
+  {
+    image: "/Brand5.avif",
+    description: `"Society6 truly has something for everyone's taste, whether you're a budding collector or a first-time buyer. The site is meticulously categorized to help you narrow down what you're looking for and it ships quickly and securely. "`,
+  },
+  {
+    image: "/Brand6.avif",
+    description: `"Society6 is the place to go if you are looking for items where art and design meet functionality in the most spectacular way. The items showcase this collision of worlds, bringing a whole new outlook on everyday items."`,
+  },
+];
+
+export const footerText = [
+  {
+    heading: "Contact Us",
+    texts: [
+      "Monday–Friday: 8am-5pm PST",
+      "3890 S Windermere St.Englewood, CO 80110",
+    ],
+  },
+  {
+    heading: "Customer Support",
+    texts: [
+      "Help Center",
+      "Shipping Information",
+      "Returns",
+      "Order Status",
+      "Gift Cards",
+      "Student Discount",
+    ],
+  },
+  {
+    heading: "About Us",
+    texts: [
+      "Our Story",
+      "Careers",
+      "Society6 Blog",
+      "Wholesale Program",
+      "Trade Program",
+    ],
+  },
+  {
+    heading: "Artist Support",
+    texts: [
+      "Sell Your Art",
+      "Artist Affiliate Program",
+      "Artist Help Center",
+      "Artist Blog",
+    ],
+  },
+];
