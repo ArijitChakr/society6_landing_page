@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Logo from "./Logo";
 import BigLogo from "./BigLogo";
 import { footerText } from "../Text";
 

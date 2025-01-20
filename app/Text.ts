@@ -1,4 +1,4 @@
-export const NavbarText = [
+export const NavbarText: string[] = [
   "New Arrivals",
   "Wall Decor",
   "Home & Living",
@@ -7,7 +7,7 @@ export const NavbarText = [
   "Inspiration",
 ];
 
-export const textSlider1 = [
+export const textSlider1: string[] = [
   "Exclusive Designs",
   "Unique Products",
   "High Quality",
@@ -15,7 +15,7 @@ export const textSlider1 = [
   "Emerging Artists",
 ];
 
-export const HeroImage = [
+export const HeroImage: { image: string; text: string }[] = [
   { image: "/HeroImage1.webp", text: "Natural Haze Style Guide" },
   { image: "/HeroImage2.webp", text: "Charming Nostalgia Style Guide" },
   { image: "/HeroImage3.webp", text: "Pantone Color of the Year 2025" },
@@ -23,7 +23,7 @@ export const HeroImage = [
   { image: "/HeroImage5.webp", text: "Modern Craft Style Guide" },
 ];
 
-export const HeroButtonTexts = [
+export const HeroButtonTexts: string[] = [
   "STILL LIFE",
   "MOTIVATIONAL",
   "NATURE",
@@ -31,7 +31,10 @@ export const HeroButtonTexts = [
   "ABSTRACT",
 ];
 
-export const ShopByRoomData = {
+export const ShopByRoomData: Record<
+  string,
+  { image1: string; image2: string; text: string; buttonText: string }
+> = {
   bathroom: {
     image1: "/Bathroom1.webp",
     image2: "/Bathroom2.webp",
@@ -58,13 +61,13 @@ export const ShopByRoomData = {
   },
 };
 
-export const galleryData = [
+export const galleryData: { image: string; text: string }[] = [
   { image: "Slider1.webp", text: "Trade Program" },
   { image: "Slider2.webp", text: "Sell Your Art" },
   { image: "Slider3.webp", text: "About Us" },
 ];
 
-export const feedbackData = [
+export const feedbackData: { image: string; description: string }[] = [
   {
     image: "/Brand1.webp",
     description: `"Whenever I want to spruce up the walls in my home, I browse Society6’s canvas prints, framed posters, and tapestries. There are so many styles and tastes to choose from…you’re bound to find something that suits your space."`,
@@ -91,7 +94,7 @@ export const feedbackData = [
   },
 ];
 
-export const footerText = [
+export const footerText: { heading: string; texts: string[] }[] = [
   {
     heading: "Contact Us",
     texts: [
