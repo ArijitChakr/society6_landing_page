@@ -1,4 +1,4 @@
-# Society6 landing page
+![image](https://github.com/user-attachments/assets/26268532-53bf-49c9-b86f-c94c46686289)# Society6 landing page
 
 ## description
 
@@ -11,11 +11,8 @@ This is the landing page for Society6. It is built using Next.js and Tailwind CS
 3. Run the development server using `npm run dev`
 4. Open http://localhost:3000 in your browser
 
-## how to deploy
-
-1. Install Vercel CLI using `npm install -g vercel`
-2. Login to Vercel using `vercel login`
-3. Deploy the project using `vercel`
+## Hosted on
+[Netlify](https://society6.netlify.app/)
 
 ## how to contribute
 
